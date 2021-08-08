@@ -1,0 +1,44 @@
+{
+  "name": "rkn",
+  "version": "0.1.0",
+  "description": "A service for checking of Internet Addresses filtered in Russian Federation",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register ./src/app.ts",
+    "start:watch": "nodemon",
+    "lint": "eslint --no-fix ./src",
+    "build": "tsc && tscpaths -p tsconfig.json -s ./src -o ./build"
+  },
+  "author": "Evgenii Kozlov",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "camelcase-keys": "^7.0.0",
+    "csv-parse": "^4.16.0",
+    "express": "^4.17.1",
+    "iconv": "^3.0.0",
+    "tldts": "^5.7.40",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/iconv": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-typescript-sort-keys": "^1.5.0",
+    "eslint-plugin-unused-imports": "^1.1.0",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^4.3.5"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
+  }
+}
