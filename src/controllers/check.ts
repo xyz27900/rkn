@@ -12,6 +12,6 @@ export const check = (storage: Storage) =>
       return;
     }
 
-    const blocked = storage.check(encodeURIComponent(url));
+    const blocked = storage.check(decodeURIComponent(url));
     res.send({ blocked });
   };
